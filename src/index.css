@@ -1,0 +1,47 @@
+@import 'tailwindcss';
+
+@theme {
+  /* The 3-column dashboard is tuned for >=1800px; below that the right column stacks. */
+  --breakpoint-xs: 30rem;
+  --breakpoint-wide: 93.75rem;
+  --breakpoint-2xl: 112.5rem;
+
+  --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand-50: #eaf8fb;
+  --color-brand-100: #cdeff5;
+  --color-brand-200: #a2e1ec;
+  --color-brand-300: #6fcddd;
+  --color-brand-400: #2fb3c9;
+  --color-brand-500: #0b9bb6;
+  --color-brand-600: #0884a2;
+  --color-brand-700: #076d8b;
+  --color-brand-800: #0a5670;
+
+  --color-ink: #10283a;
+  --color-muted: #6b7f8e;
+  --color-surface: #eef5f9;
+
+  --shadow-card: 0 10px 28px -10px rgb(16 60 90 / 0.28);
+  --shadow-banner: 0 18px 36px -14px rgb(8 132 162 / 0.55);
+  --shadow-soft: 0 4px 14px -6px rgb(16 90 120 / 0.25);
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    color: var(--color-ink);
+    background: radial-gradient(circle at 20% 0%, #f4fafd 0%, var(--color-surface) 60%);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand-500);
+    outline-offset: 2px;
+  }
+}
